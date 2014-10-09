@@ -1,0 +1,11 @@
+PASS
+BenchmarkFiveNeurons	       1	1386304028 ns/op
+BenchmarkFiveNeurons-2	       2	 753864552 ns/op
+BenchmarkFiveNeurons-4	       5	 479180965 ns/op
+BenchmarkTwentydNeurons	       1	12977084434 ns/op
+BenchmarkTwentydNeurons-2	       1	6845443063 ns/op
+BenchmarkTwentydNeurons-4	       1	4550275830 ns/op
+BenchmarkHundredNeurons	       1	72730186496 ns/op
+BenchmarkHundredNeurons-2	       1	60889235190 ns/op
+BenchmarkHundredNeurons-4	       1	52172805730 ns/op
+ok  	github.com/btracey/gobench/nettrainbench/nettrainbench	233.706s

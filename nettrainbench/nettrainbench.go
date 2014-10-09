@@ -27,8 +27,6 @@ func init() {
 }
 
 func main() {
-	defer profile.Start(profile.CPUProfile).Stop()
-
 	nData := 10000
 	nCPU := runtime.NumCPU()
 	//nCPU := 1
@@ -129,6 +127,9 @@ func main() {
 	settings := opt.DefaultSettings()
 	settings.FunctionAbsoluteTolerance = 1e-6
 	settings.MaximumFunctionEvaluations = 100
+
+	fmt.Println("nparams is ", len(initLoc))
+	defer profile.Start(profile.CPUProfile).Stop()
 
 	result, err := opt.Minimize(gradOpt, initLoc, settings, &opt.BFGS{})
 	if err != nil {
